@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: nemd/php-fpm
+    command: php-fpm7 -F
+    ports:
+      - 6000
